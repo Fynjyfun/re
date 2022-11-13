@@ -1,0 +1,59 @@
+/* Общие стили */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue",Helvetica, sans-serif;
+    padding: 0;
+}
+
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.tabs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.content {
+    display: none;
+    padding: 20px;
+    background-color: #eee;
+    width: 100%;
+}
+
+.tab {
+    text-align: center;
+    padding: 20px;
+    flex-basis: 50%;
+}
+
+#tab-1:checked ~ label[for='tab-1']{
+    background-color: #eee;
+}
+
+#tab-1:checked ~ .content-1{
+    display: block;
+}
+
+#tab-2:checked ~ label[for='tab-2']{
+    background-color: #eee;
+}
+
+#tab-2:checked ~ .content-2{
+    display: block;
+}
